@@ -1,0 +1,59 @@
+.landing-page {
+  margin-top: 60px;
+  height: 100vh;
+  background: url("http://aimstarfitness.com/wp-content/uploads/2014/03/weight-lifting-wallpaperweight-bar-workout-hd-wallpaper-of-size-1920x1080-resolutions-7tyago6s-1030x650.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.explainer-container{
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  text-shadow: 0 0 5px white;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.explainer{
+  margin: 10px;
+}
+
+.smash{
+  font-size: 38px;
+  color: white;
+  text-shadow: 0 0 10px lime;
+}
+
+.destroy{
+  font-size: 38px;
+  color: white;
+  text-shadow: 0 0 10px #00E7FF;
+}
+
+.ruiner {
+  font-size: 70px;
+  color: white;
+  text-shadow: 0 0 20px red;
+}
+
+.landing-page h1{
+  text-align: center;
+  color: white;
+  font-family: 'Audiowide', cursive;
+  font-size: 64px;
+  text-shadow: 0 0 15px black;
+  margin-bottom: 20px;
+}
+
+.player-number-button{
+  height: 100px;
+  width: 200px;
+  margin: 2.5px;
+  border-color: #3B3BDD;
+  border-radius: 25px;
+  font-family: 'Audiowide', cursive;
+  font-size: 32px;
+  background-color: #4A4AE0;
+  box-shadow: 0 0 10px black;
+  cursor: pointer;
+}
