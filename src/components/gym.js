@@ -10,7 +10,7 @@ export class Gym extends Component {
   render (){
 
     let board
-    if(!this.props.multiplayer){
+    if(this.props.singleplayer){
       board = (
         <div className = "singleplayer-gym">
           <WorkoutMat />
@@ -40,13 +40,9 @@ export class Gym extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  console.log(state.multiplayer)
-  console.log(state.singleplayer)
-  return {
+const mapStateToProps = state => ({
   multiplayer: state.players.multiplayer === true,
   singleplayer:state.players.singleplayer === true
-  }
-}
+})
 
 export default connect(mapStateToProps)(Gym);

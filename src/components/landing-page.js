@@ -33,8 +33,9 @@ export class LandingPage extends Component{
           <Link to='/gym'>
             <button 
             type="submit" 
-            className="player-number-button">Smash PRs</button>
+            className="player-number-button"
             onClick={()=>this.props.dispatch(setSinglePlayerMode())}
+            >Smash PRs</button>
           </Link>
           <Link to='/gym'>
             <button type="submit" 

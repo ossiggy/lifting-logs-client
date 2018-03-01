@@ -1,7 +1,7 @@
 import * as actions from '../actions/players';
 
 const initialState = {
-  singleplayer: false,
+  singleplayer: true,
   multiplayer: false
 }
 
