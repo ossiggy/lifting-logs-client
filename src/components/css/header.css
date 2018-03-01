@@ -2,7 +2,7 @@ header {
   position: absolute;
   top: 0;
   width: 100%;
-  background-color: #777777;
+  background-color: black;
   box-shadow: 0 0 25px black;
   color: white;
   font-family: 'Audiowide', cursive;
@@ -19,12 +19,31 @@ header {
 
 .title-box h1{
   font-size: 26px;
-  text-shadow: 0 0 15px #2900FF;
+  color:#00FFF8;
 }
 
 .title-box h2{
   font-size: 20px;
-  text-shadow: 0 0 5px #00FF05;
+  margin-left: 10px;
+  text-shadow: 0 0 15px #00FFF8;
+}
+
+.to-home{
+  float: right;
+  cursor: pointer;
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 50px;
+}
+
+.to-home:hover{
+  background-color: #5A5AFB;
+  border-color: #5A5AFB;
+}
+
+.to-home img{
+  height: 60px;
+
 }
 
 @media screen and (max-width: 500px){
