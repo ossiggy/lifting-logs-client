@@ -7,3 +7,8 @@ export const SET_SINGLEPLAYER_MODE = 'SET_SINGLEPLAYER_MODE';
 export const setSinglePlayerMode = () => ({
   type: SET_SINGLEPLAYER_MODE
 })
+
+export const NO_PLAYERS = 'NO_PLAYERS';
+export const noPlayers = () => ({
+  type: NO_PLAYERS
+})

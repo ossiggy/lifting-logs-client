@@ -12,7 +12,7 @@ header {
   padding: none;
 }
 
-.title-box h1, .title-box h2{
+.title-box h1, .title-box h2, .title-box h3{
   display: inline-block;
   margin-left: 5px;
 }
@@ -20,6 +20,12 @@ header {
 .title-box h1{
   font-size: 26px;
   color:#00FFF8;
+}
+
+.title-box h3{
+  text-align: right;
+  margin-left: 60px;
+  color: #FCFA05
 }
 
 .title-box h2{
@@ -32,6 +38,7 @@ header {
   float: right;
   cursor: pointer;
   padding-top: 5px;
+  margin-top: 5px;
   background-color: white;
   border-radius: 50px;
 }
@@ -39,6 +46,10 @@ header {
 .to-home:hover{
   background-color: #5A5AFB;
   border-color: #5A5AFB;
+}
+
+.to-home:focus{
+  outline:none;
 }
 
 .to-home img{

@@ -37,8 +37,8 @@ export class Gym extends Component {
       <div className="gym">
         <Scoreboard />
         <ExerciseSelector />
-        {board}
         <WeightBench />
+        {board}
       </div>
     )
   }

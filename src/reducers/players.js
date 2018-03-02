@@ -1,7 +1,7 @@
 import * as actions from '../actions/players';
 
 const initialState = {
-  singleplayer: true,
+  singleplayer: false,
   multiplayer: false
 }
 
@@ -20,6 +20,13 @@ export const playersReducer = (state=initialState, action) => {
       singleplayer: true,
       multiplayer: false
     });
+  }
+
+  if(action.type === actions.NO_PLAYERS) {
+    return Object.assign({}, state, {
+      singleplayer: false,
+      multiplayer: false
+    })
   }
   return state;
 };

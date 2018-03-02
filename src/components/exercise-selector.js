@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {handleExerciseChange} from '../actions';
+import {handleExerciseChange, toggleAdd} from '../actions';
 
 import './css/exercise-selector.css';
 
@@ -8,9 +8,23 @@ const data = require('../workout-list.json')
 
 export class ExerciseSelector extends Component{
 
+  toggleButton(){
+    console.log(this)
+  }
+
   render(){
 
     let lifts;
+    let toggleButton;
+
+    if(this.props.adding){
+    toggleButton = <button type="button" 
+                    className="adding" 
+                     onClick={()=>{
+                    this.props.dispatch(toggleAdd())
+                    this.toggleButton()
+                    }}>Adding</button>
+    }
 
     if(this.props.exercise){
       lifts = data[this.props.exercise].map((lift, i) => {
@@ -42,15 +56,17 @@ export class ExerciseSelector extends Component{
           }}>
           {lifts}
         </select>
+        {toggleButton}
       </div>
     )
   }
 }
 
 const mapStateToProps = state => {
-  console.log(state.exercise)
+  console.log(state)
    return { 
-    exercise: state.exercise.exercise
+    exercise: state.exercise.exercise,
+    adding: state.adding
    }
 }
 

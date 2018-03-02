@@ -1,0 +1,66 @@
+*{
+  box-sizing: border-box;
+}
+
+.weight-bench{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fo-five, .two-five, .ten, .five {
+  border-radius:150px;
+  border: 25px solid gray;
+  background-color: #525252;
+  margin-left:5px;
+  margin-right:5px;
+}
+
+.fo-five:active, .two-five:active, .ten:active, .five:active{
+  background-color: blue;
+  border-color: #4D4DFE
+}
+
+.fo-five{
+  height: 255px;
+  width: 255px;
+  border-radius: 155px; 
+}
+
+.two-five{
+  height: 235px;
+  width: 235px;
+  border-radius: 175px;
+}
+
+.ten{
+  height: 205px;
+  width: 205px;
+  border-radius: 595px;
+}
+
+.five{
+  height: 185px;
+  width: 185px;
+  border-radius: 200px;
+}
+
+.little-circle{
+  background-color: gray;
+  height: 70px;
+  line-height: 70px;
+  border-radius:200px;
+  width: 70px;;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-size: 45px;
+}
+
+.fo-five:focus, .two-five:focus, .ten:focus, .five:focus{
+  outline: none;
+}
+
+.fo-five:hover, .two-five:hover, .ten:hover, .five:hover{
+  cursor: pointer;
+}
+

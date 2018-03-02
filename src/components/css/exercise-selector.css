@@ -1,8 +1,9 @@
 .select-banner{
   margin-top: 80px;
-  background-color: blue;
+  padding: 10px;
   text-align: center;
-  height: 80px;
+  height: 100px;
+  background-color: #373737;
 }
 
 select{
@@ -15,4 +16,8 @@ select{
 
 .lift{
   width: 250px;
+}
+
+label{
+  color: white;
 }
