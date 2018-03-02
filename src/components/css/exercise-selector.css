@@ -1,0 +1,18 @@
+.select-banner{
+  margin-top: 80px;
+  background-color: blue;
+  text-align: center;
+  height: 80px;
+}
+
+select{
+  height: 80px;
+  width: 200px;
+  margin-left:10px;
+  font-size: 30px;
+  font-family: 'Audiowide', cursive;
+}
+
+.lift{
+  width: 250px;
+}

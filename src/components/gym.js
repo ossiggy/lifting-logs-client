@@ -3,10 +3,12 @@ import {connect} from 'react-redux';
 import Scoreboard from './scoreboard';
 import WorkoutMat from './workout-mat';
 import WeightBench from './weight-bench';
+import ExerciseSelector from './exercise-selector';
 
 import './css/gym.css';
 
 export class Gym extends Component {
+
   render (){
 
     let board
@@ -30,9 +32,11 @@ export class Gym extends Component {
         </div>
       )
     }
+
     return (
       <div className="gym">
         <Scoreboard />
+        <ExerciseSelector />
         {board}
         <WeightBench />
       </div>
@@ -42,7 +46,7 @@ export class Gym extends Component {
 
 const mapStateToProps = state => ({
   multiplayer: state.players.multiplayer === true,
-  singleplayer:state.players.singleplayer === true
+  singleplayer:state.players.singleplayer === true,
 })
 
 export default connect(mapStateToProps)(Gym);
