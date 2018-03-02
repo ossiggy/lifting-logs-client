@@ -18,13 +18,16 @@ export class ExerciseSelector extends Component{
     let toggleButton;
 
     if(this.props.adding){
-    toggleButton = <button type="button" 
-                    className="adding" 
-                     onClick={()=>{
-                    this.props.dispatch(toggleAdd())
-                    this.toggleButton()
-                    }}>Adding</button>
-    }
+    toggleButton = (
+      <button 
+      type="button" 
+      className="adding" 
+      onClick={()=>{
+        this.props.dispatch(toggleAdd())
+        this.toggleButton()
+      }}>Adding</button>
+    )
+  }
 
     if(this.props.exercise){
       lifts = data[this.props.exercise].map((lift, i) => {
@@ -48,12 +51,11 @@ export class ExerciseSelector extends Component{
         <option value="arms">Arms</option>
         <option value="cardio">Cardio</option>
         </select>
-        <select className="lift"
-          onChange={event=>{
-            event.preventDefault();
-            let{lift} = event.target;
-            console.log(lift)
-          }}>
+        <select className="lift" onChange={(event)=>{
+          let {value} = event.target;
+          console.log(value)
+        }}>
+        <option value="" className="placeholder">Select Lift</option>
           {lifts}
         </select>
         {toggleButton}
@@ -63,7 +65,6 @@ export class ExerciseSelector extends Component{
 }
 
 const mapStateToProps = state => {
-  console.log(state)
    return { 
     exercise: state.exercise.exercise,
     adding: state.adding

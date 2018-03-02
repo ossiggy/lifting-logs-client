@@ -16,6 +16,7 @@ export function Scoreboard(props){
       </div>
     )
   }
+  return <div></div>
 }
 
 const mapStateToProps = state => ({

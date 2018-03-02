@@ -57,3 +57,14 @@
   box-shadow: 0 0 10px black;
   cursor: pointer;
 }
+
+.player-number-button:active{
+  background-color: #23237F;
+  border-color: #161652;
+  transform: translateY(4px);
+  outline: none;
+}
+
+.player-number-button:focus{
+  outline: none;
+}

@@ -17,7 +17,8 @@
 
 .fo-five:active, .two-five:active, .ten:active, .five:active{
   background-color: blue;
-  border-color: #4D4DFE
+  border-color: #4D4DFE;
+  transform: translateY(4px);
 }
 
 .fo-five{

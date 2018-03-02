@@ -21,3 +21,11 @@ select{
 label{
   color: white;
 }
+
+.adding{
+  float: right;
+  vertical-align: center;
+  height: 60px;
+  width: 180px;
+  border-radius: 10px;
+}
