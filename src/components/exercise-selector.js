@@ -9,7 +9,15 @@ const data = require('../workout-list.json')
 export class ExerciseSelector extends Component{
 
   toggleButton(){
-    console.log(this)
+    let button = document.getElementById('toggle');
+    if(button.innerHTML==='Subbing'){
+      button.className = 'adding'
+      button.innerHTML = 'Adding'
+    }
+    else if(button.innerHTML==='Adding'){
+      button.className = 'subbing'
+      button.innerHTML = 'Subbing'
+    }
   }
 
   render(){
@@ -21,7 +29,8 @@ export class ExerciseSelector extends Component{
     toggleButton = (
       <button 
       type="button" 
-      className="adding" 
+      className="adding"
+      id="toggle" 
       onClick={()=>{
         this.props.dispatch(toggleAdd())
         this.toggleButton()

@@ -8,24 +8,50 @@
 
 select{
   height: 80px;
-  width: 200px;
+  width: 260px;
   margin-left:10px;
   font-size: 30px;
   font-family: 'Audiowide', cursive;
 }
 
 .lift{
-  width: 250px;
+  width: 290px;
 }
 
 label{
   color: white;
 }
 
-.adding{
-  float: right;
-  vertical-align: center;
-  height: 60px;
-  width: 180px;
+.adding, .subbing{
+  height: 80px;
+  width: 200px;
+  margin-left: 10px;
   border-radius: 10px;
+  font-size: 26px;
+  cursor: pointer;
+  font-family: 'Audiowide', cursive;
+}
+
+.adding {
+  background-color: lime;
+  border-bottom: 3px solid #007900;
+  border-left: 3px solid #007900;
+  border-top: 3px solid #8FFF8F;
+  border-right: 3px solid #8FFF8F
+}
+
+.subbing {
+  background-color: red;
+  border-bottom: 3px solid #710000;
+  border-left: 3px solid #710000;
+  border-top: 3px solid #FE5151;
+  border-right: 3px solid #FE5151;
+}
+
+.adding:focus, .subbing:focus{
+  outline: none;
+}
+
+.adding:active, .subbing:active{
+  transform: translateY(4px);
 }
