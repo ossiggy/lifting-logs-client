@@ -49,7 +49,10 @@
   height: 100px;
   width: 200px;
   margin: 2.5px;
-  border-color: #3B3BDD;
+  border-right-color: #5C5CDA;
+  border-top-color: #5C5CDA;
+  border-bottom-color:#292994;
+  border-left-color:#292994;
   border-radius: 25px;
   font-family: 'Audiowide', cursive;
   font-size: 32px;
