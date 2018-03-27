@@ -2,21 +2,16 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 export function Scoreboard(props){
-  if(props.singleplayer){
-    return(
-      <div className="scoreboard">
-
+  return( 
+    <div className="scoreboard">
+      <div className="weight-display">
+        weight
       </div>
-    )
-  }
-  if(props.multiplayer){
-    return(
-      <div className="scoreboard">
-        
+      <div className="rep-count">
+        rep
       </div>
-    )
-  }
-  return <div></div>
+    </div>
+  )
 }
 
 const mapStateToProps = state => ({

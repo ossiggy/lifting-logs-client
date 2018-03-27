@@ -6,5 +6,5 @@ import {weightReducer} from './weights';
 export default combineReducers({
   players: playersReducer,
   exercise: exercisesReducer,
-  adding: weightReducer
+  weight: weightReducer
 })
