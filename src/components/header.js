@@ -33,8 +33,7 @@ export function Header(props){
 
 const mapStateToProps = state => ({
   singleplayer: state.players.singleplayer === true,
-  multiplayer: state.players.multiplayer === true,
-  noplayer: state.players.singleplayer === false && state.players.multiplayer === false
+  multiplayer: state.players.singleplayer === false,
 })
 
 export default connect(mapStateToProps)(Header)

@@ -5,3 +5,9 @@
 .singleplayer-gym{
   height: 500px;
 }
+
+.total-weight{
+  color:white;
+  font-size: 96px;
+  text-align: center;
+}

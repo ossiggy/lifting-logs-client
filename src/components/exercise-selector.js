@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {handleExerciseChange, toggleAdd} from '../actions';
+import {handleExerciseChange, handleGroupChange, toggleAdd, reset} from '../actions';
 
 import './css/exercise-selector.css';
 
@@ -33,20 +33,18 @@ export class ExerciseSelector extends Component{
     )
   }
 
-    if(this.props.exercise){
-      lifts = data[this.props.exercise].map((lift, i) => {
+    if(this.props.group){
+      lifts = data[this.props.group].map((lift, i) => {
         return <option key={i} value={lift}>{lift}</option>;
       })
     };
 
     return(
       <div className="select-banner col-12">
-        <select className="muscle-group" 
-          onChange={(event)=>{
-            let {value} = event.target;
-            this.props.dispatch(handleExerciseChange(value));
-          }
-        }>
+        <select className="muscle-group" onChange={(event) => {
+          let{value} = event.target;
+          this.props.dispatch(handleGroupChange(value))
+          }}>
         <option value="" className="placeholder">Select Group</option>
         <option value="legs">Legs</option>
         <option value="back">Back</option>
@@ -57,21 +55,28 @@ export class ExerciseSelector extends Component{
         </select>
         <select className="lift" onChange={(event)=>{
           let {value} = event.target;
-          console.log(value)
+          this.props.dispatch(handleExerciseChange(value));
         }}>
         <option value="" className="placeholder">Select Lift</option>
           {lifts}
         </select>
         {toggleButton}
+        <button 
+        type="button"
+        className="reset"
+        id="reset"
+        onClick={()=>this.props.dispatch(reset())}
+        >Reset</button>
       </div>
     )
   }
 }
 
 const mapStateToProps = state => {
-  console.log(state)
+  console.log(state.weight.weight)
    return { 
     exercise: state.exercise.exercise,
+    group: state.exercise.group,
     adding: state.weight.adding
    }
 }

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import Scoreboard from './scoreboard';
-import SetForm from './set-form';
 import WeightBench from './weight-bench';
 import ExerciseSelector from './exercise-selector';
 
@@ -16,7 +15,7 @@ export class Gym extends Component {
         <Scoreboard />
         <ExerciseSelector />
         <WeightBench />
-        <SetForm />
+        <h3 className="total-weight">{this.props.weight}</h3>
       </div>
     )
   }
@@ -25,6 +24,7 @@ export class Gym extends Component {
 const mapStateToProps = state => ({
   multiplayer: state.players.multiplayer === true,
   singleplayer:state.players.singleplayer === true,
+  weight: state.weight.weight
 })
 
 export default connect(mapStateToProps)(Gym);

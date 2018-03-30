@@ -14,3 +14,20 @@ export const subWeight = weight => ({
   type: SUB_WEIGHT,
   weight
 })
+
+export const ADD_PLATE = 'ADD_PLATE';
+export const addPlate = plate => ({
+  type: ADD_PLATE,
+  plate
+})
+
+export const SUB_PLATE = 'SUB_PLATE';
+export const subPlate = plate => ({
+  type: SUB_PLATE,
+  plate
+})
+
+export const RESET = 'RESET';
+export const reset = () => ({
+  type: RESET
+})
